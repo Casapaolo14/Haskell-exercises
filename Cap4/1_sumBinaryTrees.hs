@@ -1,6 +1,6 @@
 -- ghci -XDatatypeContexts 
 
-data (Ord a) => BST a = Void | Node {
+data BST a = Void | Node {
     val :: a,
     left, right :: BST a
     }
