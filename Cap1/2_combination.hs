@@ -8,7 +8,7 @@ combination :: (Eq a, Num a, Integral a) => a -> a -> a
 combination n k 
     | k < 0 = 0
     | k > n = 0
-    | otherwise = div (factorial(n)) (factorial(n-k) * factorial(k))
+    | otherwise = div (factorial n) (factorial(n-k) * factorial k)
 
 main :: IO()
 main = do
