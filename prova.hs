@@ -4,10 +4,10 @@ import System.IO
 getString :: Double -> Double -> String
 
 getString hits bats
-    | avg < 0.200 = "merda"
+    | avg < 0.200 = "male"
     | avg < 0.400 = "buono"
     | avg < 0.600 = "ottimo"
-    | otherwise = "cazzp"
+    | otherwise = "niente"
     where avg = hits / bats
 
 generaraCoppia nEsercizi matricola = (primo, secondo) where 

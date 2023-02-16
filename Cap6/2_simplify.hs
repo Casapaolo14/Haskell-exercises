@@ -1,4 +1,4 @@
-import Distribution.Compat.Lens (_1)
+-- import Distribution.Compat.Lens (_1)
 
 data QT a = C a | Q ( QT a ) ( QT a ) ( QT a ) ( QT a )
     deriving ( Eq , Show )

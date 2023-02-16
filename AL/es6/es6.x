@@ -10,7 +10,6 @@ module Main (main) where
 
 %wrapper "basic"
 -- macro definitions
-$min = [a-z] -- Lettere Minuscole
 
 -- scanner definition
 

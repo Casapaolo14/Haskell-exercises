@@ -1,14 +1,13 @@
 -- ghci -XDatatypeContexts 
 
-data Tree a = Void | Node a [Tree a]
+data Tree a = Void | Node a [Tree a] 
     deriving (Eq, Show)
 
+myTree = Node 1 [Node 2 [Void, Void], Node 3 [Void]]
+
 treefold :: (a -> [b] -> b) -> b -> Tree a -> b 
-treefold _ val Void = val
+treefold func val Void = val
 treefold func val (Node n children) = func n (map (treefold func val) children)
-
-tree = Node 1 [Node 2 [Void, Void], Node 3 [Void]]
-
 
 sumList :: [Int] -> Int
 sumList [] = 0
